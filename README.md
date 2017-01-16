@@ -32,12 +32,6 @@ Start `http-server` and access both of the routes and verify that each highway's
 
 It is recommended that you complete the [Route Routing](./MF_ROUTE_ROUTING.md) exercise before starting this one.
 
-## Setup
-
-```
-mkdir -p ~/workspace/exercises/modern-framework/route-listing && cd $_
-```
-
 ## Requirements
 
 In this exercise you will add a default view to your Routes of America application.

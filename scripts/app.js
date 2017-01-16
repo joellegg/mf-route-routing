@@ -2,6 +2,9 @@ let app = angular.module("routesApp", ['ngRoute'])
 
 app.config(($routeProvider) => {
     $routeProvider
+        .when('/', {
+            controller: 'MainCtrl',
+            templateUrl: 'partials/main.html')
         .when('/route66', {
             controller: 'Hwy1Ctrl',
             templateUrl: 'partials/hwy1.html'
@@ -10,6 +13,11 @@ app.config(($routeProvider) => {
             controller: 'Hwy2Ctrl',
             templateUrl: 'partials/hwy2.html'
         })
+})
+
+app.controller('MainCtrl', function($scope) {
+    $scope.route1Link = "";
+    $scope.route2Link = "";
 })
 
 app.controller('Hwy1Ctrl', function($scope) {
