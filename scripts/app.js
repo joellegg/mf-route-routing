@@ -15,6 +15,9 @@ app.config(($routeProvider, $locationProvider) => {
             controller: 'Hwy2Ctrl',
             templateUrl: 'partials/hwy2.html'
         })
+        .otherwise({
+            redirectTo: '/'
+        })
 })
 
 app.controller('MainCtrl', function($scope) {
