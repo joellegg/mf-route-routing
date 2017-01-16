@@ -1,10 +1,12 @@
-let app = angular.module("routesApp", ['ngRoute'])
+let app = angular.module("routesApp", ['ngRoute']);
 
-app.config(($routeProvider) => {
+app.config(($routeProvider, $locationProvider) => {
+    $locationProvider.hashPrefix('');
     $routeProvider
         .when('/', {
             controller: 'MainCtrl',
-            templateUrl: 'partials/main.html')
+            templateUrl: 'partials/main.html'
+        })
         .when('/route66', {
             controller: 'Hwy1Ctrl',
             templateUrl: 'partials/hwy1.html'
@@ -16,8 +18,8 @@ app.config(($routeProvider) => {
 })
 
 app.controller('MainCtrl', function($scope) {
-    $scope.route1Link = "";
-    $scope.route2Link = "";
+    $scope.route1Link = "http://localhost:8080/#/route66";
+    $scope.route2Link = "http://localhost:8080/#/route44";
 })
 
 app.controller('Hwy1Ctrl', function($scope) {
